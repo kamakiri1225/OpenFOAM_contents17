@@ -1,7 +1,0 @@
-```cpp
-blockMesh
-mirrorMesh -dict system/mirrorMeshDict.X -overwrite
-mirrorMesh -dict system/mirrorMeshDict.Y -overwrite
-autoPatch 45 -overwrite
-createPatch -overwrite
-extrudeMesh -dict system/extrudeMeshDict.1
