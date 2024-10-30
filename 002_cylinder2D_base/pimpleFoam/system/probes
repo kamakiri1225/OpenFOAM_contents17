@@ -1,0 +1,41 @@
+//https://www.openfoam.com/documentation/guides/latest/api/classFoam_1_1probes.html
+probes
+{
+    type            probes;
+    libs            (sampling);
+
+    // Fields to be probed
+    fields          (U "p.*" cp);
+
+    probeLocations
+    (
+        (-0.0103  0  0.005)//180
+        (-0.0101  0.0018  0.005)//170
+        (-0.0096  0.0035  0.005)//160
+        (-0.0089  0.0051  0.005)//150
+        (-0.0079  0.0066  0.005)//140
+        (-0.0066  0.0079  0.005)//130
+        (-0.0051  0.0089  0.005)//120
+        (-0.0035  0.0096  0.005)//110
+        (-0.0018  0.0101  0.005)//100
+        (0  0.0103  0.005)//90
+        (0.0018  0.0101  0.005)//80
+        (0.0035  0.0096  0.005)//70
+        (0.0051  0.0089  0.005)//60
+        (0.0066  0.0079  0.005)//50
+        (0.0079  0.0066  0.005)//40
+        (0.0089  0.0051  0.005)//30
+        (0.0096  0.0035  0.005)//20
+        (0.0101  0.0018  0.005)//10
+        (0.0103  0  0.005)//0
+    );
+
+    // Optional: do not recalculate cells if mesh moves
+    fixedLocations  false;
+
+    // Optional: interpolation scheme to use (default is cell)
+    interpolationScheme cellPoint;
+
+    // Inherited entries
+    writeControl    writeTime;
+}

@@ -1,0 +1,67 @@
+//https://www.openfoam.com/documentation/guides/latest/api/classFoam_1_1probes.html
+probes
+{
+    type            probes;
+    libs            (sampling);
+
+    // Name of the directory for probe data
+    name            probes;
+
+    // Write at same frequency as fields
+    writeControl    outputTime;
+    writeInterval   1;
+
+    // Fields to be probed
+    fields          (U "p.*");
+
+    // Optional: do not recalculate cells if mesh moves
+    fixedLocations  false;
+
+    // Optional: interpolation scheme to use (default is cell)
+    interpolationScheme cellPoint;
+
+    probeLocations
+    (
+        ( -0.01  0  0 )  //180
+        ( -0.01  0.0009  0 )  //175
+        ( -0.0098  0.0017  0 )  //170
+        ( -0.0097  0.0026  0 )  //165
+        ( -0.0094  0.0034  0 )  //160
+        ( -0.0091  0.0042  0 )  //155
+        ( -0.0087  0.005  0 )  //150
+        ( -0.0082  0.0057  0 )  //145
+        ( -0.0077  0.0064  0 )  //140
+        ( -0.0071  0.0071  0 )  //135
+        ( -0.0064  0.0077  0 )  //130
+        ( -0.0057  0.0082  0 )  //125
+        ( -0.005  0.0087  0 )  //120
+        ( -0.0042  0.0091  0 )  //115
+        ( -0.0034  0.0094  0 )  //110
+        ( -0.0026  0.0097  0 )  //105
+        ( -0.0017  0.0098  0 )  //100
+        ( -0.0009  0.01  0 )  //95
+        ( 0  0.01  0 )  //90
+        ( 0.0009  0.01  0 )  //85
+        ( 0.0017  0.0098  0 )  //80
+        ( 0.0026  0.0097  0 )  //75
+        ( 0.0034  0.0094  0 )  //70
+        ( 0.0042  0.0091  0 )  //65
+        ( 0.005  0.0087  0 )  //60
+        ( 0.0057  0.0082  0 )  //55
+        ( 0.0064  0.0077  0 )  //50
+        ( 0.0071  0.0071  0 )  //45
+        ( 0.0077  0.0064  0 )  //40
+        ( 0.0082  0.0057  0 )  //35
+        ( 0.0087  0.005  0 )  //30
+        ( 0.0091  0.0042  0 )  //25
+        ( 0.0094  0.0034  0 )  //20
+        ( 0.0097  0.0026  0 )  //15
+        ( 0.0098  0.0017  0 )  //10
+        ( 0.01  0.0009  0 )  //5
+        ( 0.01  0  0 )  //0        
+    );
+
+    // Optional: filter out points that haven't been found. Default
+    //           is to include them (with value -VGREAT)
+    includeOutOfBounds  true;
+}

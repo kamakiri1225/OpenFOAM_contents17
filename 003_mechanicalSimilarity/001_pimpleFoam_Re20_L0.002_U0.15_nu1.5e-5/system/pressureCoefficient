@@ -1,0 +1,17 @@
+pressureCoefficient1
+{
+    type            pressure;
+    libs            (fieldFunctionObjects);
+
+    mode            staticCoeff;
+
+    result          cp;
+
+    rho             rhoInf;
+    rhoInf          1.2;
+    pInf            0;
+    UInf            (0.15 0 0);
+
+    // Inherited entries
+    writeControl    writeTime;
+}

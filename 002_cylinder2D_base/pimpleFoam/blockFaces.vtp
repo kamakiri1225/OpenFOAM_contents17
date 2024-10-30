@@ -1,0 +1,55 @@
+<?xml version='1.0'?>
+<!-- surface -->
+<VTKFile type='PolyData' version='0.1' byte_order='LittleEndian' header_type='UInt64'>
+  <PolyData>
+    <Piece NumberOfPoints='22' NumberOfPolys='20'>
+      <Points>
+        <DataArray type='Float32' Name='Points' NumberOfComponents='3' format='ascii'>
+0.01 0 0 0.1 0 0 0.2 0 0
+0.2 0.0707107 0 0.0707107 0.0707107 0 0.00707107 0.00707107 0
+0.2 0.2 0 0.0707107 0.2 0 6.12323e-19 0.2 0
+6.12323e-19 0.1 0 6.12323e-19 0.01 0 0.01 0 0.01
+0.1 0 0.01 0.2 0 0.01 0.2 0.0707107 0.01
+0.0707107 0.0707107 0.01 0.00707107 0.00707107 0.01 0.2 0.2 0.01
+0.0707107 0.2 0.01 6.12323e-19 0.2 0.01 6.12323e-19 0.1 0.01
+6.12323e-19 0.01 0.01
+        </DataArray>
+      </Points>
+      <Polys>
+        <DataArray type='Int32' Name='connectivity' format='ascii'>
+5 16 21 10 10 21 20 9 5
+10 9 4 16 15 20 21 0 11
+16 5 0 1 12 11 0 5 4
+1 11 12 15 16 2 3 14 13
+1 2 13 12 1 4 3 2 12
+13 14 15 3 6 17 14 7 18
+17 6 4 7 6 3 15 14 17
+18 9 20 19 8 8 19 18 7
+9 8 7 4 20 15 18 19
+        </DataArray>
+        <DataArray type='Int32' Name='offsets' format='ascii'>
+4 8 12 16 20 24 28 32 36
+40 44 48 52 56 60 64 68 72
+76 80
+        </DataArray>
+      </Polys>
+      <CellData>
+        <DataArray type='Int32' Name='block' format='ascii'>
+0 0 0 0 1 1 1 1 2
+2 2 2 3 3 3 3 4 4
+4 4
+        </DataArray>
+        <DataArray type='Int32' Name='face' format='ascii'>
+2 3 4 5 1 2 3 4 1
+2 3 4 1 2 3 4 0 1
+2 3
+        </DataArray>
+        <DataArray type='Int32' Name='patch' format='ascii'>
+0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0
+0 0
+        </DataArray>
+      </CellData>
+    </Piece>
+  </PolyData>
+</VTKFile>

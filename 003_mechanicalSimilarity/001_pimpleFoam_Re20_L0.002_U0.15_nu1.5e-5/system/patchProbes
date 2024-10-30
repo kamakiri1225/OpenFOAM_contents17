@@ -1,0 +1,41 @@
+patchProbes
+{
+    // Mandatory entries
+    type                patchProbes;
+    libs                (sampling);
+
+    // Conditional entries
+
+        // Specify either 'patch' or 'patches'
+        // - if both entries are present, 'patches' wins
+        patch               hole;
+        //patches             (<wordRes>);
+    probeLocations
+    (
+        (-0.01  0  0.005)//180
+        (-0.0098  0.0017  0.005)//170
+        (-0.0094  0.0034  0.005)//160
+        (-0.0087  0.005  0.005)//150
+        (-0.0077  0.0064  0.005)//140
+        (-0.0064  0.0077  0.005)//130
+        (-0.005  0.0087  0.005)//120
+        (-0.0034  0.0094  0.005)//110
+        (-0.0017  0.0098  0.005)//100
+        (0  0.01  0.005)//90
+        (0.0017  0.0098  0.005)//80
+        (0.0034  0.0094  0.005)//70
+        (0.005  0.0087  0.005)//60
+        (0.0064  0.0077  0.005)//50
+        (0.0077  0.0064  0.005)//40
+        (0.0087  0.005  0.005)//30
+        (0.0094  0.0034  0.005)//20
+        (0.0098  0.0017  0.005)//10
+        (0.01  0  0.005)//0
+    );
+
+    // Fields to be probed
+    fields          (U "p.*" cp);
+
+    // Inherited entries
+    writeControl    writeTime;
+}

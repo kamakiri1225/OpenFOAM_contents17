@@ -1,0 +1,9 @@
+#!/bin/bash
+
+blockMesh
+mirrorMesh -dict system/mirrorMeshDict.X -overwrite
+mirrorMesh -dict system/mirrorMeshDict.Y -overwrite
+autoPatch 45 -overwrite
+createPatch -overwrite
+extrudeMesh
+transformPoints -scale "(0.01 0.01 0.01)"

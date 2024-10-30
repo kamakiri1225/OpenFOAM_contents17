@@ -1,0 +1,52 @@
+<?xml version='1.0'?>
+<!-- case='pimpleFoam' region='region0' time='0' index='0' -->
+<VTKFile type='UnstructuredGrid' version='0.1' byte_order='LittleEndian' header_type='UInt64'>
+  <UnstructuredGrid>
+    <Piece NumberOfPoints='22' NumberOfCells='5'>
+      <Points>
+        <DataArray type='Float32' Name='Points' NumberOfComponents='3' format='ascii'>
+0.01 0 0 0.1 0 0 0.2 0 0
+0.2 0.0707107 0 0.0707107 0.0707107 0 0.00707107 0.00707107 0
+0.2 0.2 0 0.0707107 0.2 0 6.12323e-19 0.2 0
+6.12323e-19 0.1 0 6.12323e-19 0.01 0 0.01 0 0.01
+0.1 0 0.01 0.2 0 0.01 0.2 0.0707107 0.01
+0.0707107 0.0707107 0.01 0.00707107 0.00707107 0.01 0.2 0.2 0.01
+0.0707107 0.2 0.01 6.12323e-19 0.2 0.01 6.12323e-19 0.1 0.01
+6.12323e-19 0.01 0.01
+        </DataArray>
+      </Points>
+      <Cells>
+        <DataArray type='Int32' Name='connectivity' format='ascii'>
+5 16 15 4 10 21 20 9 1
+12 15 4 0 11 16 5 4 3
+14 15 1 2 13 12 4 7 18
+15 3 6 17 14 9 8 19 20
+4 7 18 15
+        </DataArray>
+        <DataArray type='Int32' Name='offsets' format='ascii'>
+8 16 24 32 40
+        </DataArray>
+        <DataArray type='UInt8' Name='types' format='ascii'>
+12 12 12 12 12
+        </DataArray>
+      </Cells>
+      <CellData>
+        <DataArray type='Int32' Name='cellID' format='ascii'>
+0 1 2 3 4
+        </DataArray>
+        <DataArray type='Float32' Name='local-direction0' NumberOfComponents='3' format='ascii'>
+9.54594 23.0459 -3.39474e-15 23.0459 9.54594 0 33.6787 6.97508 0
+38.7868 0 0 21.6634 0 0
+        </DataArray>
+        <DataArray type='Float32' Name='local-direction1' NumberOfComponents='3' format='ascii'>
+-11.6673 4.83274 0 -4.83274 11.6673 0 0 21.6634 0
+0 38.7868 0 6.97508 33.6787 2.70739e-15
+        </DataArray>
+        <DataArray type='Float32' Name='local-direction2' NumberOfComponents='3' format='ascii'>
+0 0 3 0 0 3 0 0 3
+0 0 3 0 0 3
+        </DataArray>
+      </CellData>
+    </Piece>
+  </UnstructuredGrid>
+</VTKFile>

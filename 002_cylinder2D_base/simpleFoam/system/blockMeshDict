@@ -1,0 +1,98 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2406                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      blockMeshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+scale   0.001;
+
+r      10.0;
+rout   100.0; // rout > r
+xout   200.0;
+yout   200.0;
+zmax   10.0;
+
+theta0   0.0;
+theta45  45.0;
+theta90  90.0;
+
+n1         40;
+n2         20;
+
+x1 #eval{$r*cos(degToRad($theta0))};
+y1 #eval{$r*sin(degToRad($theta0))};
+x2 #eval{$r*cos(degToRad($theta45))};
+y2 #eval{$r*sin(degToRad($theta45))};
+x3 #eval{$r*cos(degToRad($theta90))};
+y3 #eval{$r*sin(degToRad($theta90))};
+
+xout1 #eval{$rout*cos(degToRad($theta0))};
+yout1 #eval{$rout*sin(degToRad($theta0))};
+xout2 #eval{$rout*cos(degToRad($theta45))};
+yout2 #eval{$rout*sin(degToRad($theta45))};
+xout3 #eval{$rout*cos(degToRad($theta90))};
+yout3 #eval{$rout*sin(degToRad($theta90))};
+
+vertices
+(
+    ($x1 $y1 0 ) //0
+    ($xout1 $yout1 0) //1
+    ($xout 0 0) //2
+    ($xout $yout2  0)//3
+    ($xout2 $yout2 0) //4
+    ($x2 $y2 0)//5
+    ($xout $yout 0) //6
+    ($xout2 $yout 0)//7
+    ($x3 $yout 0) //8
+    ($x3 $yout3 0) //9
+    ($x3 $y3 0) //10
+
+    ($x1  $y1 $zmax) //11
+    ($xout1 $yout1 $zmax) //12
+    ($xout 0 $zmax) //13
+    ($xout $yout2  $zmax)//14
+    ($xout2 $yout2 $zmax) //15
+    ($x2 $y2 $zmax)//16
+    ($xout $yout $zmax) // 17
+    ($xout2 $yout $zmax)// 18
+    ($x3 $yout $zmax) // 19
+    ($x3 $yout3 $zmax) // 20
+    ($x3 $y3 $zmax) // 21
+ );
+
+ blocks
+ (
+    hex (5 4 9 10 16 15 20 21) ($n1 $n1 1) simpleGrading (1 1 1)
+    hex (0 1 4 5 11 12 15 16) ($n1 $n1 1) simpleGrading (1 1 1)
+    hex (1 2 3 4 12 13 14 15) ($n2 $n1 1) simpleGrading (1 1 1)
+    hex (4 3 6 7 15 14 17 18) ($n2 $n2 1) simpleGrading (1 1 1)
+    hex (9 4 7 8 20 15 18 19) ($n1 $n2 1) simpleGrading (1 1 1)
+ );
+
+ edges
+ (
+    arc 0 5 origin (0 0 0)
+    arc 5 10 origin (0 0 0)
+    arc 1 4 origin (0 0 0)
+    arc 4 9 origin (0 0 0)
+    arc 11 16 origin (0 0 $zmax)
+    arc 16 21 origin (0 0 $zmax)
+    arc 12 15 origin (0 0 $zmax)
+    arc 15 20 origin (0 0 $zmax)
+ );
+
+ boundary
+ (
+ );
+
+// ************************************************************************* //
