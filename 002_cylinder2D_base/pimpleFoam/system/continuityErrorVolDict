@@ -63,6 +63,6 @@ Xmin
 
 Xmax
 {
-   $Xmin;
+  $Xmin;
   name Xmax;
 }
