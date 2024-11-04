@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Clean the case
+foamCleanTutorials
+
+# Generate the mesh
+blockMesh
+
+# Run the solver
+pimpleFoam
+
+# Post-processing (optional)
+# e.g., reconstructPar, foamToVTK, etc.
+
+# Notify the user
+echo "Simulation completed."
