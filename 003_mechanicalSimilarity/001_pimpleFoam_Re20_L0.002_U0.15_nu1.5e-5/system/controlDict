@@ -55,7 +55,7 @@ functions
     #includeFunc yPlus
     
     #include "continuityErrorVolDict"
-    #include "forceCoesffs" 
+    #include "forceCoeffs" 
     #include "probes"
 
     #include "patchProbes"
